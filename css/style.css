@@ -16,10 +16,14 @@ ul{
   padding: 0;
   margin: 0;
 }
+#results{
+  display: flex;
+  flex-wrap: wrap;
 
+}
 
 #results li{
-  width: 400px;
+  width: 200px;
   display: flex;
   border: none;
   background-color: lightgrey;
@@ -28,7 +32,9 @@ ul{
   justify-content: space-around;
   padding: 10px;
   margin-bottom: 15px;
+  align-items: center;margin-right: 15px;
 }
+
 
 #uk{
   width: 30px;
