@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8"> <!--  -->
+    <title>Boolflix</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- ? -->
+    <link rel="stylesheet" href="css/all.min.css"> <!-- font awsome-is dokumenttan linki  -->
+    <link rel="stylesheet" href="css/fontawesome.min.css"> <!-- font awsome-is dokumenttan linki  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script> <!-- handlebar -->
+    <!-- moment js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+      <!-- handlebar template -->
+      <script id="movie-template" type="text/x-handlebars-template">
+        <li data-id="{{ li_class }}">
+          <div><img src="{{ image }}"></div>
+          <div>{{ title }}</div>
+          <div>{{{ type }}}</div>
+          <div>{{ original_title }}</div>
+          <div class="langg">{{ original_language }}</div>
+          <div class="votee"></div>
+        </li>
+      </script>
+
+      <script id="tv-template" type="text/x-handlebars-template">
+        <li data-id-tv="{{ li_class }}">
+          <div><img src="{{ imagee }}"></div>
+          <div>{{ name }}</div>
+          <div>{{{ type }}}</div>
+          <div>{{ original_name }}</div>
+          <div class="langgtv">{{ original_language }}</div>
+          <div class="voteetv"></div>
+        </li>
+      </script>
+
+
+      <script id="fullstar-template" type="text/x-handlebars-template">
+        <i  class="fas fa-star"></i>
+      </script>
+
+      <script id="emptystar-template" type="text/x-handlebars-template">
+        <i  class="far fa-star"></i>
+      </script>
+
+      <script id="flag-uk-template" type="text/x-handlebars-template">
+        <img id="uk" src="img/uk.svg" alt="">
+      </script>
+
+
+    <link rel="stylesheet" href="css/style.css"> <!-- chemi css faili -->
+  </head>
+
+  <body>
+
+
+
+
+    <div class="container">
+      <div class="header">
+        <input id="query" type="text" name="" value="">
+        <button id="search" type="button" name="button">Button</button>
+      </div>
+      <div class="results">
+        <ul id="results">
+        </ul>
+      </div>
+
+    </div>
+
+
+
+
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script5.js"></script>
+  </body>
+
+</html>
