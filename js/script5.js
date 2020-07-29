@@ -51,9 +51,15 @@ function getMovies(query){
         var emptyStar = $('#empty-star');
 
 
-
         // console.log(votoM, stelle);
         var starr = $('#star-template');
+
+        var myPoster;
+        if(movie['poster_path'] == null){
+          myPoster = 'img/cat.jpg';
+        } else{
+          myPoster = 'https://image.tmdb.org/t/p/w154' + movie['poster_path'];
+        }
 
         var movieHTML = compiled({
           li_class: i,
@@ -61,7 +67,7 @@ function getMovies(query){
           type: '<div class="movie">Movie</div>',
           original_title: movie['original_title'],
           original_language: movie['original_language'],
-          image: 'https://image.tmdb.org/t/p/w154' + movie['poster_path']
+          image: myPoster
         });
         target.append(movieHTML);
 
@@ -119,12 +125,19 @@ function getSeries(){
         var votoM = series[i]['vote_average'];
         var stelle = parseInt(votoM / 2);
         var fullStar = $('#full-star');
-        var emptyStar = $('#empty-star');       
+        var emptyStar = $('#empty-star');
 
 
 
         // console.log(votoM, stelle);
         var starr = $('#star-template');
+
+        var myPoster;
+        if(serie['poster_path'] == null){
+          myPoster = 'img/cat.jpg';
+        } else{
+          myPoster = 'https://image.tmdb.org/t/p/w154' + serie['poster_path']
+        }
 
         var serieHTML = compiled({
           li_class: i,
@@ -132,7 +145,7 @@ function getSeries(){
           type: '<div class="series">Series</div>',
           original_name: serie['original_name'],
           original_language: serie['original_language'],
-          imagee: 'https://image.tmdb.org/t/p/w154' + serie['poster_path']
+          imagee: myPoster
 
         });
         target.append(serieHTML );

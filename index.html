@@ -14,7 +14,7 @@
       <!-- handlebar template -->
       <script id="movie-template" type="text/x-handlebars-template">
         <li data-id="{{ li_class }}">
-          <div><img src="{{ image }}"></div>
+          <div class="poster-fixed"><img src="{{ image }}"></div>
           <div>{{{ type }}}</div>
           <div>{{ title }}</div>
           <div>{{ original_title }}</div>
@@ -25,7 +25,7 @@
 
       <script id="tv-template" type="text/x-handlebars-template">
         <li data-id-tv="{{ li_class }}">
-          <div><img src="{{ imagee }}"></div>
+          <div class="poster-fixed"><img src="{{ imagee }}"></div>
           <div>{{{ type }}}</div>
           <div>{{ name }}</div>
           <div>{{ original_name }}</div>
