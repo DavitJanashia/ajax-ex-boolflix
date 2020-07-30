@@ -180,11 +180,15 @@ function getSeries(){
 function myHover(){
   $(document).on({
     mouseenter: function () {
-      $(this).addClass('red');
+      $(this).addClass('grey');
+      $(this).children('.myPosterr').addClass('myHide');
+      $(this).children('.myInfo').removeClass('myHide');
     },
 
     mouseleave: function () {
-      $(this).removeClass('red');
+      $(this).removeClass('grey');
+      $(this).children('.myPosterr').removeClass('myHide');
+      $(this).children('.myInfo').addClass('myHide');
     }
   }, '.mycard');
 }

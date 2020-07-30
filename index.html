@@ -14,23 +14,35 @@
       <!-- handlebar template -->
       <script id="movie-template" type="text/x-handlebars-template">
         <li class="mycard" data-id="{{ li_class }}">
-          <div class="poster-fixed"><img src="{{ image }}"></div>
-          <div>{{{ type }}}</div>
-          <div>{{ title }}</div>
-          <div>{{ original_title }}</div>
-          <div class="langg">{{ original_language }}</div>
-          <div class="votee"></div>
+
+          <div class="myPosterr">
+            <div class="poster-fixed"><img src="{{ image }}"></div>
+          </div>
+
+          <div class="myInfo myHide">
+            <div>{{{ type }}}</div>
+            <div>{{ title }}</div>
+            <div>{{ original_title }}</div>
+            <div class="langg">{{ original_language }}</div>
+            <div class="votee"></div>
+          </div>
         </li>
       </script>
 
       <script id="tv-template" type="text/x-handlebars-template">
         <li class="mycard" data-id-tv="{{ li_class }}">
-          <div class="poster-fixed"><img src="{{ imagee }}"></div>
-          <div>{{{ type }}}</div>
-          <div>{{ name }}</div>
-          <div>{{ original_name }}</div>
-          <div class="langgtv">{{ original_language }}</div>
-          <div class="voteetv"></div>
+          <div class="myPosterr">
+            <div class="poster-fixed"><img src="{{ imagee }}"></div>
+          </div>
+
+          <div class="myInfo myHide">
+            <div>{{{ type }}}</div>
+            <div>{{ name }}</div>
+            <div>{{ original_name }}</div>
+            <div class="langgtv">{{ original_language }}</div>
+            <div class="voteetv"></div>
+          </div>
+
         </li>
       </script>
 
@@ -56,6 +68,8 @@
 
 
 
+
+
     <div class="container">
       <div class="header">
         <input id="query" type="text" name="" value="">
@@ -66,9 +80,6 @@
         </ul>
       </div>
 
-      <div class="prova">
-
-      </div>
 
     </div>
 
