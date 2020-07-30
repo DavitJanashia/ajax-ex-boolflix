@@ -1,14 +1,11 @@
 // api key mag saitidan
 //meore api pdfshia
 function addSearchClickListener (){
-
   var target = $('#search');
   target.click(mySearch);
 }
 
 function mySearch(){
-
-
   var target = $('#results');
   target.html('');
 
@@ -43,7 +40,7 @@ function getMovies(query){
 
       for (var i = 0; i < movies.length; i++) {
         var movie = movies[i];
-        console.log(movie);
+        // console.log(movie);
 
         var votoM = movies[i]['vote_average'];
         var stelle = parseInt(votoM / 2);
@@ -58,7 +55,7 @@ function getMovies(query){
         if(movie['poster_path'] == null){
           myPoster = 'img/cat.jpg';
         } else{
-          myPoster = 'https://image.tmdb.org/t/p/w154' + movie['poster_path'];
+          myPoster = 'https://image.tmdb.org/t/p/w185' + movie['poster_path'];
         }
 
         var movieHTML = compiled({
@@ -73,7 +70,7 @@ function getMovies(query){
 
 
         var targetvotee = $(`li[data-id="${i}"] .votee`);
-        console.log(stelle);
+        // console.log(stelle);
         for (var q = 0; q < stelle; q++) {
           targetvotee.append($('#fullstar-template').html());
         }
@@ -120,7 +117,7 @@ function getSeries(){
 
       for (var i = 0; i < series.length; i++) {
         var serie = series[i];
-        console.log(serie);
+        // console.log(serie);
 
         var votoM = series[i]['vote_average'];
         var stelle = parseInt(votoM / 2);
@@ -136,7 +133,7 @@ function getSeries(){
         if(serie['poster_path'] == null){
           myPoster = 'img/cat.jpg';
         } else{
-          myPoster = 'https://image.tmdb.org/t/p/w154' + serie['poster_path']
+          myPoster = 'https://image.tmdb.org/t/p/w185' + serie['poster_path']
         }
 
         var serieHTML = compiled({
@@ -152,7 +149,7 @@ function getSeries(){
 
 
         var targetvoteeTv = $(`li[data-id-tv="${i}"] .voteetv`);
-        console.log(stelle);
+        // console.log(stelle);
         for (var q = 0; q < stelle; q++) {
           targetvoteeTv.append($('#fullstar-template').html());
         }
@@ -176,17 +173,39 @@ function getSeries(){
       console.log(err);
     }
   });
+
 }
+
+
+function myHover(){
+  $(document).on({
+    mouseenter: function () {
+      $(this).addClass('red');
+    },
+
+    mouseleave: function () {
+      $(this).removeClass('red');
+    }
+  }, '.mycard');
+}
+
 function init(){
   addSearchClickListener();
+  myHover();
 }
 
 $(document).ready(init);
 
 
 
-
-
+// funzione per ordinare array in base alla chiave DA VEDERE SE FUNZIONA
+// function sortByKey(array, key) {
+//     return array.sort(function(a, b) {
+//         var x = a[key];
+//         var y = b[key];
+//         return ((x < y) ? 1 : ((x > y) ? -1 : 0));
+//     });
+// }
 
 
 
