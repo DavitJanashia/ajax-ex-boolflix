@@ -3,13 +3,16 @@
   margin: 0;
   /* DEBUG:  */
   /* border:1px solid black; */
-  padding:5px;
+  /* padding:5px; */
 }
 
 body, html {
   width: 100%;
   height: 100vh;
-  font-family: arial, monospace;
+  font-family: arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: #000;
+  color: #999;
 }
 ul{
   list-style: none;
@@ -58,6 +61,7 @@ ul{
 
 }
 
+
 .poster-fixed > *{
   max-height: 100%;
 }
@@ -68,4 +72,125 @@ ul{
 
 .myHide{
   display: none;
+}
+
+.all-container{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('https://i.ibb.co/vXqDmnh/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.background-black {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0 100px 120px 0 rgba(0, 0, 0, 0.7), inset 0  -100px 120px 0 rgba(0, 0, 0,0.7);
+}
+
+#signup {
+  display: inline-block;
+  background-color: #e31221;
+  color: #fff;
+  padding: 0.4rem 1.2rem;
+  font-size: 1rem;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+  border-radius: 2px;
+  font-weight: lighter;
+}
+
+#boolflix{
+  height: 63px;
+}
+
+.navbar{
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 50px;
+}
+
+#query{
+  height: 70px;
+  width: 500px;
+}
+
+.button-input{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#search{
+  height: 70px;
+  font-size: 29px;
+  color: white;
+  font-weight: lighter;
+  background-color: #e31221;
+  border: none;
+  display: flex;
+  align-items:  center;
+  justify-content:  center;
+  padding-left: 32px;
+  padding-right: 25px;
+  letter-spacing: 3px;
+}
+
+#search i{
+  font-size: 22px;
+  margin-left: 9px;
+}
+.main > *{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-text{
+  width: 640px;
+  margin: auto;
+  text-align: center;
+}
+
+#some-text{
+font-size: 4rem;
+}
+
+#some-text-middle{
+ font-size: 1.625rem;
+ margin: 10px 0 26px 0;
+}
+#some-other-text{
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.main p{
+  color: white;
+}
+
+#query{
+  padding: 0 10px;
+  font-size: 15px;
+}
+
+#query::placeholder{
+  font-size: 15px;
 }

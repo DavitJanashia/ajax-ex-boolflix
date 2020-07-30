@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--  -->
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- ? -->
     <link rel="stylesheet" href="css/all.min.css"> <!-- font awsome-is dokumenttan linki  -->
+    <link href="your-project-dir/font-css/LineIcons.css" rel="stylesheet">
+    <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
     <link rel="stylesheet" href="css/fontawesome.min.css"> <!-- font awsome-is dokumenttan linki  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script> <!-- handlebar -->
     <!-- moment js -->
@@ -64,24 +66,51 @@
   </head>
 
   <body>
+    <div class="all-container">
+      <div class="background-black">
+        <div class="container">
+          <div class="header">
+            <div class="navbar">
+              <a href="https://fontmeme.com/netflix-font/"><img id="boolflix" src="https://fontmeme.com/permalink/200730/37d99cd674749a8f30c52e40d42dab74.png" alt="netflix-font" border="0"></a>
+              <button id="signup" type="button" name="button">Signup</button>
+            </div>
+          </div>
+
+          <div class="main">
+            <div class="top-text">
+              <p id="some-text">Film, serie TV e tanto altro. Senza limiti.</p>
+            </div>
+            <div class="">
+              <p id="some-text-middle">Guarda ciò che vuoi ovunque. Disdici quando vuoi.</p>
+            </div>
+
+            <div class="button-input">
+              <input id="query" type="text" name="" placeholder="Cerca su Boolflix">
+              <button id="search" type="button" name="button" >COMINCIA<i class="lni lni-chevron-right"></i></button>
+            </div>
+            <div class="">
+              <p id="some-other-text">Film, serie TV e tanto altro. Senza limiti.</p>
+            </div>
 
 
 
 
+          </div>
 
+          <div class="results">
+            <ul id="results">
+            </ul>
+          </div>
 
-    <div class="container">
-      <div class="header">
-        <input id="query" type="text" name="" value="">
-        <button id="search" type="button" name="button">Button</button>
+        </div>
       </div>
-      <div class="results">
-        <ul id="results">
-        </ul>
-      </div>
-
-
     </div>
+
+
+
+
+
+
 
 
 
