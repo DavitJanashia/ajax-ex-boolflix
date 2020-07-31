@@ -52,11 +52,14 @@ function getMovies(query){
         var starr = $('#star-template');
 
         var myPoster;
+
         if(movie['poster_path'] == null){
-          // myPoster = 'img/cat.jpg';
+          $(`li[data-id="${i}"] .notfound`).removeClass('myHide');
+          $(`li[data-id="${i}"] .poster-fixed`).addClass('myHide');
         } else{
           myPoster = 'https://image.tmdb.org/t/p/w342' + movie['poster_path'];
         }
+
 
         var movieHTML = compiled({
           li_class: i,
@@ -67,6 +70,8 @@ function getMovies(query){
           image: myPoster
         });
         target.append(movieHTML);
+
+
 
 
         var targetvotee = $(`li[data-id="${i}"] .votee`);
@@ -130,11 +135,7 @@ function getSeries(){
         var starr = $('#star-template');
 
         var myPoster;
-        if(serie['poster_path'] == null){
-          // myPoster = 'img/cat.jpg';
-        } else{
-          myPoster = 'https://image.tmdb.org/t/p/w342' + serie['poster_path']
-        }
+
 
         var serieHTML = compiled({
           li_class: i,
@@ -146,6 +147,13 @@ function getSeries(){
 
         });
         target.append(serieHTML );
+
+        if(serie['poster_path'] == null){
+          $(`li[data-id-tv="${i}"] .notfound`).removeClass('myHide');
+          $(`li[data-id-tv="${i}"] .poster-fixed`).addClass('myHide');
+        } else{
+          myPoster = 'https://image.tmdb.org/t/p/w342' + serie['poster_path']
+        }
 
 
         var targetvoteeTv = $(`li[data-id-tv="${i}"] .voteetv`);
