@@ -53,9 +53,9 @@ function getMovies(query){
 
         var myPoster;
         if(movie['poster_path'] == null){
-          myPoster = 'img/cat.jpg';
+          // myPoster = 'img/cat.jpg';
         } else{
-          myPoster = 'https://image.tmdb.org/t/p/w185' + movie['poster_path'];
+          myPoster = 'https://image.tmdb.org/t/p/w342' + movie['poster_path'];
         }
 
         var movieHTML = compiled({
@@ -131,9 +131,9 @@ function getSeries(){
 
         var myPoster;
         if(serie['poster_path'] == null){
-          myPoster = 'img/cat.jpg';
+          // myPoster = 'img/cat.jpg';
         } else{
-          myPoster = 'https://image.tmdb.org/t/p/w185' + serie['poster_path']
+          myPoster = 'https://image.tmdb.org/t/p/w342' + serie['poster_path']
         }
 
         var serieHTML = compiled({
